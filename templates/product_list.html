@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все товары — StepStyle</title>
+</head>
+<body>
+
+<h1>Все товары</h1>
+
+<div class="product-list">
+    {% for product in products %}
+        <div class="product-item">
+            <a href="{% url 'product_detail' product.pk %}">
+                <img src="{{ product.image.url }}" alt="{{ product.title }}" width="200">
+            </a>
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price }} ₽</p>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Контакты — Магазин обуви</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contact-info {
+            padding: 20px;
+            font-size: 16px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Контакты — Магазин обуви</h1>
+</header>
+
+<nav>
+    <a href="{% url 'home' %}">Главная</a>
+    <a href="#">Мужская обувь</a>
+    <a href="{% url 'woman' %}">Женская обувь</a>
+    <a href="{% url 'contacts' %}">Контакты</a>
+</nav>
+
+<div class="container">
+    <h2>Свяжитесь с нами</h2>
+    <div class="contact-info">
+        <p><strong>Адрес:</strong> г. Бишкек, ул. Обувная, д. 10</p>
+        <p><strong>Телефон:</strong> +996 (495) 123-45-67</p>
+        <p><strong>Email:</strong> info@shoe-shop.ru</p>
+        <p><strong>Время работы:</strong> Пн–Пт с 10:00 до 19:00</p>
+        <p><strong>Мы в соцсетях:</strong></p>
+        <ul>
+            <li><a href="#" target="_blank">ВКонтакте</a></li>
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Telegram</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Магазин Обуви. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
